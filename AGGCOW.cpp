@@ -5,7 +5,7 @@ using namespace std;
 int bs(int x, vector<int> p, int c)
 {
   int last_pos = p[0], cows = 1;
-  
+
   for (auto i=p.begin(); i!=p.end(); i++)
 	{
 	  if (*i-last_pos >= x)
@@ -38,7 +38,7 @@ int main()
 
 	  sort (p.begin(), p.end());
 	  p.erase(unique(p.begin(),p.end()), p.end());
-	  
+
 	  start = 0;
 	  end   = p.back() - p.front();
 	  while (start+1 < end)
@@ -53,6 +53,6 @@ int main()
 
 	  cout << start << endl;
 	}
- 
+
   return 0;
 }
